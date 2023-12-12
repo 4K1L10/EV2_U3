@@ -1,0 +1,23 @@
+.container {
+    background-color: rgb(47, 114, 166);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#appForm{
+    width: 400px;
+    padding: 2px;
+    margin: auto;
+    margin-top: 2px;
+
+}
+#body{
+    background-color:  rgb(17, 14, 63);
+    padding: 200px;
+    max-width: 1600px;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px
+}

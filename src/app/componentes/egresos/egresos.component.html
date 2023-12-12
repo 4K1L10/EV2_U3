@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="container">
+    <form [formGroup]="formulario" method="post" (ngSubmit)="boton_Enviar()">   
+        <div class="row">
+          <div class="col-md-12 text-center">
+  <table id="table">
+    <tr>
+        <label for="descripcion">descripcion:</label><br>
+        <input type="text" placeholder="Ingresa tu descripcion" id="descripcion" formControlName="descripcion" required>
+          <small *ngIf="serviceegreso.descripcion?.error?.required && serviceegreso.descripcion.touched">
+            La Descripción es requerida</small>  
+          <small *ngIf="serviceegreso.descripcion?.error?.minlength">
+            La Descripción debe contener al menos 10 caracteres</small>
+
+        <br> <label for="precio">precio:</label><br>
+        <input type="text" placeholder="Ingresa el precio" id="precio" formControlName="precio" required>
+        <small *ngIf="serviceegreso.precio?.error?.required && serviceegreso.precio.touched">
+            El precio es requerido</small>  
+          <small *ngIf="serviceegreso.precio?.error?.minlength">
+            El precio debe contener al menos 20 caracteres</small>
+        
+        <br><label for="id_usuario">id_usuario:</label><br>
+        <input type="text" placeholder="Ingresa el id_usuario" id="id_usuario" formControlName="id_usuario" required>
+        <small *ngIf="serviceegreso.id_usuario?.error?.required && serviceegreso.id_usuario.touched">
+            El id_usuario es requerido</small>  
+          <small *ngIf="serviceegreso.id_usuario?.error?.minlength">
+            El id_usuario debe contener al menos 20 caracteres</small>
+</tr>
+          <br> <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid">Enviar</button>
+        </table>
+        </div>    
+    </div>
+    </form> 
+</div>
+
+</body>
+</html>  

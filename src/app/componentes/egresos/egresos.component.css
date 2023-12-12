@@ -1,0 +1,13 @@
+.container {
+    background-color: rgb(24, 146, 113);
+    padding: 20px;
+    max-width: 1600px;
+    max-height: 1600px;
+  }
+  
+  .form-group{
+    width: 400px;
+    padding: 2px;
+    margin: auto;
+    margin-top: 2px;
+  } 
