@@ -108,4 +108,14 @@ export class EgresosComponent implements OnInit {
       console.error('ID de usuario no encontrado en la ruta.');
     }
   }
+  obtenerTodosEgresos() {
+    this.egreso.obtenerTodosEgresos().subscribe(
+      (response: any) => {
+        console.log("Egresos Registrados:", response);
+      },
+      (error) => {
+        console.error("Error al obtener egresos:", error);
+      }
+    );
+  }
 }

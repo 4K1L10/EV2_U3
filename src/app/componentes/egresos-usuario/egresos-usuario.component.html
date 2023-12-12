@@ -36,6 +36,7 @@
                 <td>{{ egreso.precio | currency:'USD':'symbol':'1.2-2' }}</td>
                 <td>{{ egreso.id_usuario }}</td>
             </tr>
+            <button (click)="obtenerEgresosUsuario()">Obtener Egresos de un Usuario</button>
         </ng-container>
         </tbody>
     </table>

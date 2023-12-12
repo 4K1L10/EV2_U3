@@ -22,4 +22,8 @@ obtener_registros(){
 obtenerUsuarioObtener() {
   return this.UsuarioObtener;
 }
+obtenerTodosUsuarios(): Observable<any> {
+  return this.http.get(`${this.url_backend+'/obtener-usuarios'}`);
+}
+
 }

@@ -65,4 +65,15 @@ export class UsuarioComponent implements OnInit {
       );
     }
   }
+  obtenerTodosUsuarios() {
+    this.usuarioService.obtenerTodosUsuarios().subscribe(
+      (response: any) => {
+        console.log("Usuarios Registrados:", response);
+      },
+      (error) => {
+        console.error("Error al obtener usuarios:", error);
+      }
+    );
+  }
+
 }

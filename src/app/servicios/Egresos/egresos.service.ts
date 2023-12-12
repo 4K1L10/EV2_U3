@@ -37,4 +37,10 @@ export class EgresoService {
     const url = `${this.url_backend}/obtener-egresos-usuario/${id}`;
     return this.http.get(url);
   }
+  obtenerTodosEgresos() {
+    return this.http.get(`${this.url_backend}/obtener-egresos`);
+  }
+  obtenerEgresosUsuario(idUsuario: string): Observable<any> {
+    return this.http.get(`${this.url_backend}/obtener-egresos-usuario/${idUsuario}`);
+  }
 }

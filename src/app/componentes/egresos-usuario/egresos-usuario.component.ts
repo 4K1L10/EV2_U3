@@ -23,5 +23,15 @@ export class EgresosUsuarioComponent {
       }
     );
   }
-
+  obtenerEgresosUsuario() {
+    const idUsuario = '...'; 
+    this.egresoService.obtenerEgresosUsuario(idUsuario).subscribe(
+      (response: any) => {
+        console.log("Egresos del Usuario:", response);
+      },
+      (error) => {
+        console.error("Error al obtener egresos del usuario:", error);
+      }
+    );
+  }
 }

@@ -35,7 +35,8 @@
           <small *ngIf="serviceegreso.id_usuario?.error?.minlength">
             El id_usuario debe contener al menos 20 caracteres</small>
 </tr>
-          <br> <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid">Enviar</button>
+          <br> <button type="submit" class="btn btn-primary" [disabled]="!formulario.valid">Enviar</button><br>
+          <br><button (click)="obtenerTodosEgresos()">Obtener Egresos Registrados</button>
         </table>
         </div>    
     </div>
